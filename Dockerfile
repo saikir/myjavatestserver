@@ -8,7 +8,7 @@ ARG jarVersion
 ENV JARNAME=$jarName
 ENV VERSION=$jarVersion
 
-COPY target/$jarName-jarVersion.jar /opt
+COPY target/$jarName-$jarVersion.jar /opt
 
 EXPOSE 8080
 
