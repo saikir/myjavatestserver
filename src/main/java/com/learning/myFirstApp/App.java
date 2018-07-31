@@ -25,7 +25,7 @@ public class App
     static class MyHandler implements HttpHandler{
 
 		public void handle(HttpExchange t) throws IOException {
-			String response = "<h1>Yo Bro!!</h1>";
+			String response = "<h1>Yo Bro!!"+"The current docker version is"+System.getEnv("DOCKERIMAGE")+"</h1>";
 			t.sendResponseHeaders(200, response.length());
 			OutputStream os = t.getResponseBody();
 			os.write(response.getBytes());
