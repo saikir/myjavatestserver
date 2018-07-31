@@ -1,4 +1,4 @@
-FROM anapsix/apline-java
+FROM anapsix/alpine-java
 
 COPY target/myFirstApp-0.0.1-SNAPSHOT.jar /opt
 
