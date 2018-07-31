@@ -1,10 +1,10 @@
 FROM anapsix/alpine-java
 
-#for building
+# for building
 ARG jarName
 ARG jarVersion
 
-#for execution
+# for execution
 ENV JARNAME=$jarName
 ENV VERSION=$jarVersion
 
