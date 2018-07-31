@@ -1,7 +1,13 @@
 FROM anapsix/alpine-java
 
-COPY target/myFirstApp-0.0.1-SNAPSHOT.jar /opt
+ARG jarName #for building
+ARG jarVersion
+
+ENV JARNAME=$jarName #for execution
+ENV VERSION=$jarVersion
+
+COPY target/$jarName-jarVersion.jar /opt
 
 EXPOSE 8080
 
-ENTRYPOINT [ "sh", "-c", "java -jar /opt/myFirstApp-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT [ "sh", "-c", "java -jar /opt/$JARNAME-$VERSION.jar" ]
