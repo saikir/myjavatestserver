@@ -1,9 +1,11 @@
 FROM anapsix/alpine-java
 
-ARG jarName #for building
+#for building
+ARG jarName
 ARG jarVersion
 
-ENV JARNAME=$jarName #for execution
+#for execution
+ENV JARNAME=$jarName
 ENV VERSION=$jarVersion
 
 COPY target/$jarName-jarVersion.jar /opt
